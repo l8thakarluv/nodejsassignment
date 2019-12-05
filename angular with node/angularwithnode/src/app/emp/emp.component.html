@@ -1,0 +1,30 @@
+<!--<form [formGroup] = "register">
+  Name:
+  <input type="text" formControlName="name" required><br>
+
+  Position:
+  <input type="text" formControlName="position" required><br>
+
+  Office: 
+  <input type="text" formControlName="office" required><br>
+
+  salary:
+  <input type="text" formControlName="salary" required><br>
+
+  <button (click)="add()">Save</button><br>
+</form>-->
+
+  <table>
+    <tr>
+      <td>name</td>
+      <td>position</td>
+      <td>office</td>
+    </tr>
+    <tr *ngFor="let emps of this.empList">
+      <td>{{emps.name}}</td>
+      <td>{{emps.position}}</td>
+      <td>{{emps.office}}</td>
+      <td><button (click) = "edit(emps)">Edit</button></td>
+      <td><button (click) = "del(emps._id)">Delete</button></td>
+    </tr>
+  </table>
